@@ -1,0 +1,62 @@
+# NeMo Guardrails
+
+## Tool description
+
+NeMo Guardrails is a toolkit which is used to implement guardrails in LLM-based conversational systems.
+
+This open source project is backed by NVIDIA, it uses different techniques to evaluate the safety, security, robustness and accuracy of prompts and responses from LLM models.
+
+It gives you quite some flexibility on how to run the assessed models, you can run them on the NVIDIA cloud, for which you will need API keys and credits to spend, locally or using a model that is exposed via a publicly available API (i.e: ChatGPT).
+
+This tool comes with a language designed for modelling the conversational applications, colang. With it, general instructions can be configured to guide the behavior of the LLM. These instructions are similar to a system prompt and are appended at the beginning of every prompt sent to the LLM. This setup ensures that the model consistently adheres to the specified guidelines throughout the conversation.
+
+Apart from that, NeMo implements rails that can be applied at the user provided prompt, at the LLM response, that can be used to restrict the conversation to certain topics, or that uses RAG for responding.
+
+There is a very wide variety of rail types, among them, free to use and paid ones. Based on the system that acts as a judge, there are self-checking guardrails, which uses the own target LLM as judge to determine the quality of the prompts and responses, Community models and libraries that use OSS as judge, Third party APIs, which normally involves purchasing credits and having an API key, and even Heuristics methods.
+
+Based on what they check, there are content safety, security, hallucination detection, fact checking and basically anything that third parties APIs or community models can check.
+
+The main assets of this tool is its maturity, how easy it is to use and its versatility and the number of integrations it has.
+
+## Notebooks
+
+### NeMo_GuardRails_Input_Rails.ipynb
+
+This notebook is based on the example explained in https://docs.nvidia.com/nemo/guardrails/latest/getting-started/4-input-rails/README.html.
+
+We want to test input filtering using NeMo Guardrails, we used openAI's `gpt-3.5-turbo-instruct` model and we will try a very basic jailbreak attack in two different scenarios.
+
+1. The model without Guardrail: Note that the attack can fail due to the built-in protections in the model, however, it won't hinder the purpose of this example
+2. The model with the Guardrail: In this case, we will see how the model blocks the prompt and doesn't forward it to the target model.
+
+## Tooling
+
+- **Guardrails**
+
+  - **LLM Self-Checking**
+    - **Input Checking**: Evaluates user inputs to detect and prevent processing of inappropriate or harmful content.
+    - **Output Checking**: Assesses model outputs to ensure they align with expected behaviors and do not contain undesirable content.
+    - **Fact Checking**: Verifies the factual accuracy of the model's responses.
+    - **Hallucination Detection**: Identifies instances where the model generates information that is not grounded in the provided data.
+    - **Content Safety**: Ensures that both inputs and outputs adhere to safety guidelines, preventing the generation or processing of unsafe content.
+
+  - **Community Models and Libraries**
+    - **AlignScore-based Fact Checking**: Utilizes the AlignScore model to perform fact-checking on generated content.
+    - **LlamaGuard-based Content Moderation**: Employs LlamaGuard for moderating content to ensure compliance with safety standards.
+    - **Patronus Lynx-based RAG Hallucination Detection**: Uses Patronus Lynx to detect hallucinations in Retrieval-Augmented Generation (RAG) scenarios.
+    - **Presidio-based Sensitive Data Detection**: Integrates Presidio to identify and manage sensitive data within inputs and outputs.
+    - **BERT-score Hallucination Checking**: *COMING SOON* – Uses BERT-score for detecting hallucinations in generated content.
+
+  - **Third-Party APIs**
+    - **ActiveFence Moderation**: Provides moderation services to detect and handle inappropriate content.
+    - **Got It AI RAG TruthChecker**: Offers truth-checking capabilities for RAG applications.
+    - **AutoAlign**: Facilitates automatic alignment of model outputs with desired guidelines.
+    - **Cleanlab Trustworthiness Score**: Assesses the trustworthiness of data and model outputs.
+    - **GCP Text Moderation**: Google Cloud Platform's service for moderating text content.
+    - **Private AI PII Detection**: Detects Personally Identifiable Information (PII) to ensure privacy compliance.
+    - **Fiddler Guardrails for Safety and Hallucination Detection**: Implements guardrails to enhance safety and detect hallucinations in model outputs.
+    - **Prompt Security Protection**: Ensures that prompts do not lead to security vulnerabilities.
+    - **OpenAI Moderation API**: *COMING SOON* – A service to moderate content generated by OpenAI models.
+
+  - **Other**
+    - **Jailbreak Detection Heuristics**: Identifies attempts to bypass or manipulate the model's intended behavior.

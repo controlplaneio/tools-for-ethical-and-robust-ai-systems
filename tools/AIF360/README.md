@@ -12,8 +12,6 @@ It contains metrics as well that can help us assess the model predictions, these
 
 Lastly it has detectors, which identify subgroups that are favoured or discriminated against by our model.
 
-Our experience with AIF360 was very positive, the documentation was broad and clear, it was easy to use and it is relatively lightweight. It is true that its purpose is very specific but also it is worth to say that there are not many tools that assess bias and discrimination and it is nice to have one as mature and as backed as this one.
-
 ## Notebooks
 
 ### AIF360_tutorial_bias_advertising.ipynb

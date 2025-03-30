@@ -14,19 +14,19 @@ As you see the range of topics is broad, but the number of examples of the gener
 
 ### giskard_quickstart_nlp.ipynb
 
-TODO
+Giskard notebook for natural language processing
 
 ### giskard_quickstart_tabular.ipynb
 
-TODO
+Giskard notebook for tabular data
 
 ### giskard_quickstart_vision.ipynb
 
-TODO
+Giskard notebook for vision models
 
 ### My_Guiskard_quickstart_llm.ipynb
 
-TODO
+Giskard notebook for LLMs
 
 ## Tooling
 

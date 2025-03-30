@@ -2,15 +2,17 @@
 
 ## Tool description
 
-LangKit is an open source text metrics toolkit for monitoring language models. It comes with a variety of methods for extracting relevant information from the prompts sent and responses coming from a model.
+LangKit is an open-source text metrics toolkit for monitoring language models. It includes various methods for extracting relevant information from prompts sent to a model and its responses.
 
 This project is backed by WhyLabs, a company specializing in AI observability and security, providing tools to monitor, manage, and safeguard machine learning (ML) and generative AI applications.
 
-LangKit focuses on runtime monitoring of the inputs and outputs of LLMs. It covers, Text Quality features with readability and complexity scores, Text relevance, to ensure that the prompt/responses are relevant against user-defined themes and that the topics they cover are similar, Security and Privacy, which covers, among other things, jailbreaks, prompt injections and hallucinations, and lastly, Sentiment and toxicity analysis.
+LangKit focuses on real-time monitoring of LLM inputs and outputs. It covers Text Quality, offering readability and complexity scores; Text Relevance, ensuring prompts and responses align with user-defined themes and cover similar topics; Security and Privacy, addressing issues such as jailbreaks, prompt injections, and hallucinations; and Sentiment and Toxicity Analysis.
 
-Since we are talking about real time monitoring, visualization of he results are key. Langkit offers two possibilities. The first is sending the results to WhyLabs platform to visualize them, which requires opening an account and creating an API key to use (there is a free tier that you can benefit from). The second is using another open source library that WhyLabs provides, which is WhyLogs and with which you can visualize the results as well without needing to send them outside.
+Since real-time monitoring is essential, visualizing the results is key. LangKit offers two options:
 
-In general, we found LangKit very easy to use, it’s not the best maintained tool from the ones we analyzed but the status of the repository is acceptable, and very useful in terms of real time monitoring of LLMs.
+Sending the results to the WhyLabs platform for visualization, which requires creating an account and an API key (a free tier is available).
+
+Using WhyLabs’ open-source library, WhyLogs, to visualize results locally without sending data externally.
 
 ## Notebooks
 

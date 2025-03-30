@@ -16,7 +16,7 @@ But if you want to evaluate LLMs security very thoroughly, look no further than 
 
 ### garak_poetry.ipynb
 
-TODO: add description
+General Garak evaluation against `deepseek`, `OpenAI` and several Huggingface models.
 
 ## Tooling
 

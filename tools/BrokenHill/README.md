@@ -2,11 +2,11 @@
 
 ## Tool description
 
-To be fair, we had a lot of fun with BrokenHill. It covers just a single attack against LLM, the Greedy Coordinate Gradient (GCG) attack which is essentially a jailbreak adversarial attack.
+BrokenHill is a tool designed to execute the Greedy Coordinate Gradient (GCG) attack, an adversarial jailbreak method targeting large language models (LLMs). This attack aims to manipulate an LLM into generating restricted responses by gradually modifying the input.
 
-The logic behind the attack is simple, you define an input, which is normally something that under normal conditions the LLM wouldn’t respond to (in our tests, we asked how to annihilate the human race, for a reasonable price I’m willing to disclose that information) and the beginning of an ideal response (i.e: Sure thing, the best way to annihilate the human race would be…). Then, the adversarial attack model will slightly modify the input with strange characters or with other sentences until the target model responds something that starts more or less as the beginning of your ideal response using gradient descent.
+The process involves defining an initial input that the model would normally reject and specifying the desired beginning of a response. The attack then iteratively alters the input using subtle changes—such as introducing special characters or alternative phrasing—until the model produces an output that aligns with the predefined response pattern. This optimization is achieved through gradient descent.
 
-Despite all the fun, it would be difficult to use it in a production grade environment because it requires a sheer amount of resources (>20GB Memory of GPU) and it’s not very well maintained unfortunately (deprecated libraries and broken dependencies), however, we find it useful for academic purposes or for enjoying yourself on a boring day.
+While BrokenHill effectively demonstrates the vulnerability of LLMs to adversarial attacks, its practical use in real-world environments is limited. The tool requires significant computational resources, including more than 20GB of GPU memory, and suffers from maintenance issues, such as deprecated libraries and broken dependencies. However, it remains an useful resource for research and experimentation in adversarial attack methodologies.
 
 ## Notebooks
 

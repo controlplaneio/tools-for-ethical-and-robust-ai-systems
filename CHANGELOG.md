@@ -3,12 +3,10 @@
 ### Date
 
 Changes:
-- List of changes
+- Adding initial tools for ethical and robust AI systems
 
 Improvements:
-- List of improvements 
 
 Bug Fixes:
-- NA
 
 ---
